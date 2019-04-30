@@ -12,6 +12,6 @@ Game Description: Tic-tac-toe (American English), noughts and crosses (British E
 
 This project is for my CSE-299 course.
 
-Github project link-
+Github project link- https://github.com/KAWSHIQ/Group-X/blob/Kawshiq/README.md
 
 Trello board link- https://trello.com/b/4dygxD5U
