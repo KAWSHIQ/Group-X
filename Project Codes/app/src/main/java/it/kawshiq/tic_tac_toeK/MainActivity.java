@@ -26,7 +26,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static int counter= 1;
 
     private boolean CPUCtrl = false;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        initGameBoard();
 
+        gameBoard=new Board();
+        textView= (TextView) findViewById(R.id.textView);
+        button= (Button) findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetGame();
+            }
+        });
+
+    }
 
 
 }
