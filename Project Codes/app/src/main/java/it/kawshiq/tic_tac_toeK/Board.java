@@ -66,4 +66,14 @@ public class Board {
             }
             playCounter++;
 
+             if (getGameResult()!=4){
+                gameOver=true;
+              // Log.d("Board","Game Over +Player"+getCurrentPlayer()+"Wins");
+            }
+
+        }
+
+    }
+            
+            
 }
