@@ -105,7 +105,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-    
+    private void updateUI(){
+
+        switch (gameBoard.getGameResult()){
+            case 1:  textView.setText("Player 1 Wins!"); break;
+            case 2:  textView.setText("Player 2 Wins!"); break;
+            case 0:  textView.setText("Game Draw!");    break;
+            default: break;
+        }
+
+
+    }
     
     
 }
