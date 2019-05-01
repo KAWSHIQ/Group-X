@@ -117,6 +117,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    
+    private void resetGame(){
+        mTableLayout.removeAllViews();
+        textView.setText(" ");
+        initGameBoard();
+        gameBoard=new Board();
+    }
+    
 
 }
-
