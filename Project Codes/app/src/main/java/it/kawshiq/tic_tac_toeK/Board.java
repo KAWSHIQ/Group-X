@@ -114,6 +114,55 @@ public class Board {
                 return GAME_RESULT_WIN;
             }
         }
+        
+        
+        //test diagonalSum
+        diagonalSum=gameBoardArr[0][0]+gameBoardArr[1][1]+gameBoardArr[2][2];
+        anotherDiagonalSum=gameBoardArr[2][0]+gameBoardArr[1][1]+gameBoardArr[0][2];
+
+        if (diagonalSum==3||anotherDiagonalSum==3){
+            return GAME_RESULT_WIN;
+        }else if (diagonalSum==15||anotherDiagonalSum==15){
+            return GAME_RESULT_FAIL;
+        }
+
+
+
+        //check for draw
+        for (int i=0;i<3;i++){
+            for (int j=0;j<3;j++){
+                if (gameBoardArr[i][j]==0){
+                    hasZero=true;
+                }
+            }
+        }
+
+        if (!hasZero){
+            return GAME_RESULT_DRAW;
+        }
+
+
+        return gameResult;
+    }
+
+    public List getAvailableSlots(){
+
+        List<Integer> list =new ArrayList<>();
+
+        int flag=1;
+        for (int i=0;i<3;i++){
+            for (int j=0;j<3;j++){
+                if (gameBoardArr[i][j]==0){
+                    list.add(flag);
+                }
+                flag++;
+            }
+        }
+
+        //Log.d("Board","AvaliableSolts: "+list.toString());
+
+        return list;
+    }
     
     
 }
