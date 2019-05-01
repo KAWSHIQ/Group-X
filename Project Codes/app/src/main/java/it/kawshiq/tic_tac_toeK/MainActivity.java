@@ -80,6 +80,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    
+    
+     @Override
+    public void onClick(View v) {
+
+
+
+        String Player1="O";
+        String Player2="X";
+        String place="";
+
+        if (!gameBoard.gameOver){
+            switch (gameBoard.getCurrentPlayer()){
+                case 1: place=Player1;break;
+                case 2: place=Player2;break;
+            }
+
+
+            int choice = Integer.valueOf(v.getTag().toString());
+            gameBoard.placePiece(choice); ((Button)v).setText(place);
+            updateUI();
+
+        }
+
+    }
+    
+    
 
 }
 
