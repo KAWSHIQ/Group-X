@@ -93,5 +93,15 @@ public class Board {
         int columnSum=0;
         int diagonalSum=0;
         int anotherDiagonalSum=0;
+        
+        //Test Row
+        for (int i=0;i<3;i++){
+            rowSum=gameBoardArr[i][0]+gameBoardArr[i][1]+gameBoardArr[i][2];
+            if (rowSum==15){
+                return GAME_RESULT_FAIL;
+            }else if (rowSum==3){
+                return GAME_RESULT_WIN;
+            }
+        }
             
 }
