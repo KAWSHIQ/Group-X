@@ -103,5 +103,16 @@ public class Board {
                 return GAME_RESULT_WIN;
             }
         }
+        
+        
+        //Test Column
+        for (int i=0;i<3;i++){
+            columnSum=gameBoardArr[0][i]+gameBoardArr[1][i]+gameBoardArr[2][i];
+            if (columnSum==15){
+                return GAME_RESULT_FAIL;
+            }else if (columnSum==3){
+                return GAME_RESULT_WIN;
+            }
+        }
             
 }
