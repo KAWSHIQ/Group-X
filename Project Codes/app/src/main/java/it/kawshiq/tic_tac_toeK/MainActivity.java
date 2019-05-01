@@ -46,6 +46,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    
+    private void initGameBoard(){
+
+        mTableLayout= (TableLayout) findViewById(R.id.table_layout);
+        mTableLayout.setStretchAllColumns(true);
+       // mTableLayout.setBackgroundResource(R.color.blue);
+
+        int counter = 1;
+        for(int row=0;row<3;row++) {
+            TableRow tableRow=new TableRow(this);
+            for(int col=0;col<3;col++) {
+
+                Button button=new Button(this);
+
+                button.setTag(counter);
+
+                //button.setText(row+","+col+"\nTag:"+button.getTag());
+
+                button.setOnClickListener(this);
+                button.setWidth(300);
+                button.setHeight(300);
+                button.setTextSize(40);
+
+                tableRow.addView(button);
+
+                counter++;
+
+            }
+
+            mTableLayout.addView(tableRow, new TableLayout.LayoutParams(FP, WC));
+        }
+
+
+    }
 
 }
 
