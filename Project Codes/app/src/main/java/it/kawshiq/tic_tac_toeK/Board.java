@@ -75,4 +75,24 @@ public class Board {
         }
 
     }
+    public int getCurrentPlayer() {
+        int currentPlayer;
+        if (this.playCounter%2==0)
+            currentPlayer=2;
+        else
+            currentPlayer=1;
+        return currentPlayer;
+    }
+
+    public int getGameResult(){
+
+        int gameResult=4;
+
+        boolean hasZero=false;
+        int rowSum=0;
+        int columnSum=0;
+        int diagonalSum=0;
+        int anotherDiagonalSum=0;
+    
+    
 }
