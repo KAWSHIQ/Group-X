@@ -40,4 +40,29 @@ public class Board {
         return copy;
     }
 
+    
+    public void placePiece(int position){
+
+        if (!gameOver){
+            //Log.d("Board","placePiece vaild");
+            int score=0;
+            switch (getCurrentPlayer()){
+                case 1:score=1;break;
+                case 2:score=5;break;
+            }
+
+            switch (position){
+                case 1: gameBoardArr[0][0]=score; break;
+                case 2: gameBoardArr[0][1]=score; break;
+                case 3: gameBoardArr[0][2]=score; break;
+                case 4: gameBoardArr[1][0]=score; break;
+                case 5: gameBoardArr[1][1]=score; break;
+                case 6: gameBoardArr[1][2]=score; break;
+                case 7: gameBoardArr[2][0]=score; break;
+                case 8: gameBoardArr[2][1]=score; break;
+                case 9: gameBoardArr[2][2]=score; break;
+                default: break;
+            }
+            playCounter++;
+    
 }
